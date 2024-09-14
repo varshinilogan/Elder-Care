@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Physician Management</title>
+</head>
+<body>
+    <h1>Physician Management</h1>
+    
+    <!-- add new physician -->
+    <h2>Add New Physician</h2>
+    <form action="add_physician.php" method="post">
+        <label for="first_name">First Name:</label>
+        <input type="text" id="first_name" name="first_name" required><br><br>
+        
+        <label for="last_name">Last Name:</label>
+        <input type="text" id="last_name" name="last_name" required><br><br>
+        
+        <label for="specialty">Specialty:</label>
+        <input type="text" id="specialty" name="specialty"><br><br>
+        
+        <label for="phone_number">Phone Number:</label>
+        <input type="text" id="phone_number" name="phone_number"><br><br>
+        
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email"><br><br>
+        
+        <label for="address">Address:</label>
+        <textarea id="address" name="address"></textarea><br><br>
+        
+        <input type="submit" value="Add Physician">
+    </form>
+    
+    <!-- update physicians -->
+    <h2>Update Physician</h2>
+    <form action="update_physician.php" method="post">
+        <label for="update_id">Physician ID:</label>
+        <input type="number" id="update_id" name="update_id" required><br><br>
+        
+        <label for="update_phone_number">New Phone Number:</label>
+        <input type="text" id="update_phone_number" name="update_phone_number"><br><br>
+        
+        <input type="submit" value="Update Physician">
+    </form>
+    
+    <!-- delete physicians -->
+    <h2>Delete Physician</h2>
+    <form action="delete_physician.php" method="post">
+        <label for="delete_id">Physician ID:</label>
+        <input type="number" id="delete_id" name="delete_id" required><br><br>
+        
+        <input type="submit" value="Delete Physician">
+    </form>
+    
+    <!-- view physicians -->
+    <h2>View Physicians</h2>
+    <form action="retrieve_physicians.php" method="get">
+        <input type="submit" value="Show All Physicians">
+    </form>
+</body>
+</html>
